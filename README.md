@@ -10,4 +10,24 @@ The data I would want to capture from the users is most directly related to what
 Reading Garret's book on the Elements of User Experience was particularly helpful in terms of breaking down exactly what I was intending to do with the project and writing down all of the elements as suggested. 
 
 - Know what you're building:
+	- For my individual work, I'm building a wayfinding application. It's intended purpose is to aid in getting people from one room to another within the building. It should be easy to navigate and intuiative for the sake of anyone using it. 
+
+- Know what you're not building: 
+	- This is neither a virtual tour or a total website. It is also not intended to replace in-person assistance.
+
+- Things the users say that they want: 
+	- From coworkers:
+		- Common directional questions for heavy traffic areas
+		- Information on each of the rooms and the hours of departments
+		- Links to specific departments' websites on their pages
+		- TBC
+
+- Things the users `actually` want:
+	- A clear representation of the building 
+	- Easy to navigate
+
+- Things the users don't know they want: 
+	- Simplicity at its core
+
+I'm working toward incorporating each of these elements into the main design and keep each space with data using RIOT. 
 	
