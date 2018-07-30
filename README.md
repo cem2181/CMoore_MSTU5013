@@ -4,3 +4,10 @@ I'm still waiting to hear back from a group about working together, so may chang
 As is commented above, the learning problem I'm trying to solve is mostly practical: no one knows how to easily navigate our building. There are plenty of ways to solve that if we can give individual attention to each person, but that is not feasible. The hope with this app would be to allow more people to be able to experience the best of what the building has to offer from the very beginning and allow for less confusion. This app will feature navigation, information, room tours, reservations, and history to better connect everyone to the building.
 
 The data I would want to capture from the users is most directly related to what spaces they search for the most and, in a section for suggestions, what they would like to see changed in the building. Hopefully, if gathered correctly, my team can learn from the data and have an analytics page that provides us with more information to easily implement new initiatives.
+
+## Independent Study A: UX/UI design
+
+Reading Garret's book on the Elements of User Experience was particularly helpful in terms of breaking down exactly what I was intending to do with the project and writing down all of the elements as suggested. 
+
+- Know what you're building:
+	
