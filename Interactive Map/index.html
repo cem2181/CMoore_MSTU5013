@@ -2,17 +2,40 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Riot JS Test
+    <title>Interactive Map Test
     </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
   </head>
   <body>
     <lerner></lerner>
 
-
     <script src="./tags/lerner.tag" type="riot/tag"></script>
+    <script src="./tags/first-floor.tag" type="riot/tag"></script>
+    <script src="./tags/second-floor.tag" type="riot/tag"></script>
+    <script src="./tags/third-floor.tag" type="riot/tag"></script>
+    <script src="./tags/fourth-floor.tag" type="riot/tag"></script>
+    <script src="./tags/fifth-floor.tag" type="riot/tag"></script>
+    <script src="./tags/sixth-floor.tag" type="riot/tag"></script>
+    <script src="./tags/seventh-floor.tag" type="riot/tag"></script>
+    <script src="./tags/eighth-floor.tag" type="riot/tag"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/riot@3.10.3/riot+compiler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
 
+      var config = {
+        apiKey: "AIelfijelsn334lifs3j4isfielsj43lw34ng0",
+        authDomain: "fir-tutorial-3u475.firebaseapp.com",
+        databaseURL: "https://fir-tutorial-3u475.firebaseio.com",
+        projectId: "fir-tutorial-3u475",
+        storageBucket: "fir-tutorial-3u475.appspot.com",
+        messagingSenderId: "102398476596"
+      };
+      firebase.initializeApp(config);
+
+    </script>
     <script>
         riot.mount('*');
     </script>
