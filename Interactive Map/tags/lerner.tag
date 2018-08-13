@@ -1416,7 +1416,6 @@
         imageURL: "http://placehold.it/50x50"
       },{
         name: "Second Floor",
-        id: "secondFloor",
         floor: 2,
         numberOfRooms: 8,
         exitLevel: true,
@@ -1424,7 +1423,6 @@
         imageURL: "http://placehold.it/50x50"
       },{
         name: "Third Floor",
-        id: "thirdFloor",
         floor: 3,
         numberOfRooms: 5,
         exitLevel: false,
@@ -1432,7 +1430,6 @@
         imageURL: "http://placehold.it/50x50"
       },{
         name: "Fourth Floor",
-        id: "fourthFloor",
         floor: 4,
         numberOfRooms: 10,
         exitLevel: false,
@@ -1440,7 +1437,6 @@
         imageURL: "http://placehold.it/50x50"
       },{
         name: "Fifth Floor",
-        id: "fifthFloor",
         floor: 5,
         numberOfRooms: 11,
         exitLevel: false,
@@ -1448,7 +1444,6 @@
         imageURL: "http://placehold.it/50x50"
       },{
         name: "Sixth Floor",
-        id: "sixthFloor",
         floor: 6,
         numberOfRooms: 2,
         exitLevel: false,
@@ -1456,7 +1451,6 @@
         imageURL: "http://placehold.it/50x50"
       },{
         name: "Seventh Floor",
-        id: "seventhFloor",
         floor: 7,
         numberOfRooms: 3,
         exitLevel: false,
@@ -1464,7 +1458,6 @@
         imageURL: "http://placehold.it/50x50"
       },{
         name: "Eighth Floor",
-        id: "eighthFloor",
         floor: 8,
         numberOfRooms: 1,
         exitLevel: false,
@@ -1475,6 +1468,8 @@
         let selection = this.
         alert("This will take you to a new page with the floorplan for the individual floor");
       }
+
+      /*add function to add tag on click with openPage()*/
   </script>
 
   <style>

@@ -30,4 +30,12 @@ Reading Garret's book on the Elements of User Experience was particularly helpfu
 	- Simplicity at its core
 
 I'm working toward incorporating each of these elements into the main design and keep each space with data using RIOT. 
+
+##Update 8/12
+I've done quite a bit of work these weeks on figuring out an intuitive system using RIOT and Firebase. Still a lot to be done before the final project is complete, but I've definitely made some progress. 
+
+As far as the User Data demo......I'm still working on how to implement that into my design. It's not really something that has turned out to be extremely data heavy, so we'll see what happens as I don't want to add it just to have it if it detracts from what should be there.
+
+I'll actually have an update on that after more work tomorrow. 
+
 	
