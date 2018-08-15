@@ -1,3 +1,0 @@
-<second-floor>
-  
-</second-floor>

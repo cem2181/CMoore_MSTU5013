@@ -1,3 +1,0 @@
-<sixth-floor>
-
-</sixth-floor>

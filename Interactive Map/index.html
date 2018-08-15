@@ -1,27 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Interactive Map Test
-    </title>
+    <title>Interactive Map Test</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
-  <body>
-    <lerner></lerner>
-    <first-floor></first-floor>
 
-    <script src="./tags/lerner.tag" type="riot/tag"></script>
-    <script src="./tags/first-floor.tag" type="riot/tag"></script>
-    <script src="./tags/second-floor.tag" type="riot/tag"></script>
-    <script src="./tags/third-floor.tag" type="riot/tag"></script>
-    <script src="./tags/fourth-floor.tag" type="riot/tag"></script>
-    <script src="./tags/fifth-floor.tag" type="riot/tag"></script>
-    <script src="./tags/sixth-floor.tag" type="riot/tag"></script>
-    <script src="./tags/seventh-floor.tag" type="riot/tag"></script>
-    <script src="./tags/eighth-floor.tag" type="riot/tag"></script>
+  <body>
+    <div class="wrapper">
+      <sidebar></sidebar>
+      <div id="page-content-wrapper">
+        <div id="content"></div>
+      </div>
+    </div>
+
+
+    <script src="./Pages/sidebar.tag" type="riot/tag"></script>
+    <script src="./Pages/lernerHome/lerner.tag" type="riot/tag"></script>
+    <script src="./Pages/firstFloor/first-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/secondFloor/second-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/thirdFloor/third-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/fourthFloor/fourth-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/fifthFloor/fifth-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/sixthFloor/sixth-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/seventhFloor/seventh-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/eighthFloor/eighth-floor.tag" type="riot/tag"></script>
+    <script src="./Pages/right-bar.tag" type="riot/tag"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/riot@3.10.3/riot+compiler.min.js"></script>
+    <script src="https://rawgit.com/riot/route/master/dist/route.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script>
@@ -38,7 +51,24 @@
 
     </script>
     <script>
-        riot.mount('*');
+      riot.mount('*');
     </script>
+
+    <style type="text/css">
+
+      .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+      }
+
+      #page-content-wrapper {
+        width: 82%;
+        position: relative;
+        padding: 15px;
+        margin-right: -250px;
+      }
+
+      </style>
   </body>
 </html>

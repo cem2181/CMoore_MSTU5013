@@ -1,7 +1,5 @@
 <lerner>
-  <div class="container">
-  <div class="row">
-    <div class="col-xl">
+
 <!--SVG coordinates below from adobe illustrator export -->
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 3604 1502.6" style="enable-background:new 0 0 3604 1502.6;" xml:space="preserve">
         <g>
@@ -1386,570 +1384,495 @@
           <path class="st56" d="M1284.7,830.6c0-0.6,0.3-0.8,0.9-0.9C1285.5,830.3,1285.2,830.6,1284.7,830.6z"/>
         </g>
       </svg>
-    </div>
-  </div>
   <div class="row">
-      <button class="btn" onclick="openPage()">First Floor</button>
-      <button class="btn" onclick="openPage()">Second Floor</button>
-      <button class="btn" onclick="openPage()">Third Floor</button>
-      <button class="btn" onclick="openPage()">Fourth Floor</button>
-      <button class="btn" onclick="openPage()">Fifth Floor</button>
-      <button class="btn" onclick="openPage()">Sixth Floor</button>
-      <button class="btn" onclick="openPage()">Seventh Floor</button>
-      <button class="btn" onclick="openPage()">Eighth Floor</button>
-  </div>
-  <div class="row">
-    <div class="col-xl">
+    <div class="col-xl" id="alLerner">
       <h1>Alfred Lerner Hall</h1>
     </div>
   </div>
-</div>
-  <script>
-  let tag = this;
-      this.floors = [{
-        name: "First Floor",
-        id: "firstFloor",
-        floor: 1,
-        numberOfRooms: 6,
-        exitLevel: true,
-        eastSide: true,
-        imageURL: "http://placehold.it/50x50"
-      },{
-        name: "Second Floor",
-        floor: 2,
-        numberOfRooms: 8,
-        exitLevel: true,
-        eastSide: true,
-        imageURL: "http://placehold.it/50x50"
-      },{
-        name: "Third Floor",
-        floor: 3,
-        numberOfRooms: 5,
-        exitLevel: false,
-        eastSide: true,
-        imageURL: "http://placehold.it/50x50"
-      },{
-        name: "Fourth Floor",
-        floor: 4,
-        numberOfRooms: 10,
-        exitLevel: false,
-        eastSide: true,
-        imageURL: "http://placehold.it/50x50"
-      },{
-        name: "Fifth Floor",
-        floor: 5,
-        numberOfRooms: 11,
-        exitLevel: false,
-        eastSide: true,
-        imageURL: "http://placehold.it/50x50"
-      },{
-        name: "Sixth Floor",
-        floor: 6,
-        numberOfRooms: 2,
-        exitLevel: false,
-        eastSide: false,
-        imageURL: "http://placehold.it/50x50"
-      },{
-        name: "Seventh Floor",
-        floor: 7,
-        numberOfRooms: 3,
-        exitLevel: false,
-        eastSide: false,
-        imageURL: "http://placehold.it/50x50"
-      },{
-        name: "Eighth Floor",
-        floor: 8,
-        numberOfRooms: 1,
-        exitLevel: false,
-        eastSide: false,
-        imageURL: "http://placehold.it/50x50"
-      }];
-      this.navigate = function(event) {
-        let selection = this.
-        alert("This will take you to a new page with the floorplan for the individual floor");
-      }
 
+  <script>
       /*add function to add tag on click with openPage()*/
   </script>
 
   <style>
+
+    #alLerner {
+      padding-top: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 5em;
+    }
+
     .row {
       text-align: center;
       margin-bottom: 25px;
     }
+    /*Style section below taken from Adobe Illustrator until next comment*/
+    .st0 {
+      fill: #fefefe;
+    }
+
+    .st1 {
+      fill: #ffffff;
+    }
+
+    .st2 {
+      fill: #171818;
+    }
+
+    .st3 {
+      fill: #9eaeae;
+    }
+
+    .st4 {
+      fill: #dae4e4;
+    }
+
+    .st5 {
+      fill: #252c2c;
+    }
+
+    .st6 {
+      fill: #5c7171;
+    }
+
+    .st7 {
+      fill: #6f8282;
+    }
+
+    .st8 {
+      fill: #feffff;
+    }
+
+    .st9 {
+      fill: #f8f7f7;
+    }
+
+    .st10 {
+      fill: #fdfdfd;
+    }
+
+    .st11 {
+      fill: #fdfefe;
+    }
+
+    .st12 {
+      fill: #fcfdfd;
+    }
+
+    .st13 {
+      fill: #fcfcfc;
+    }
+
+    .st14 {
+      fill: #fcfbfb;
+    }
+
+    .st15 {
+      fill: #fcfefe;
+    }
+
+    .st16 {
+      fill: #fafafa;
+    }
+
+    .st17 {
+      fill: #fbfcfc;
+    }
+
+    .st18 {
+      fill: #f9f9f9;
+    }
+
+    .st19 {
+      fill: #fbfafa;
+    }
+
+    .st20 {
+      fill: #fafbfb;
+    }
+
+    .st21 {
+      fill: #fafdfd;
+    }
+
+    .st22 {
+      fill: #f9fbfb;
+    }
+
+    .st23 {
+      fill: #f8fbfb;
+    }
+
+    .st24 {
+      fill: #f8fafa;
+    }
+
+    .st25 {
+      fill: #f7f8f8;
+    }
 
-    button:hover {
-      background-color: #9bddff;
-      }
-
-h1 {
-  text-align: center;
-  font-size: 5em;
-}
-/*Style section below taken from Adobe Illustrator until next comment*/
-.st0 {
-  fill: #fefefe;
-}
-
-.st1 {
-  fill: #ffffff;
-}
-
-.st2 {
-  fill: #171818;
-}
-
-.st3 {
-  fill: #9eaeae;
-}
-
-.st4 {
-  fill: #dae4e4;
-}
-
-.st5 {
-  fill: #252c2c;
-}
-
-.st6 {
-  fill: #5c7171;
-}
-
-.st7 {
-  fill: #6f8282;
-}
-
-.st8 {
-  fill: #feffff;
-}
-
-.st9 {
-  fill: #f8f7f7;
-}
-
-.st10 {
-  fill: #fdfdfd;
-}
-
-.st11 {
-  fill: #fdfefe;
-}
-
-.st12 {
-  fill: #fcfdfd;
-}
-
-.st13 {
-  fill: #fcfcfc;
-}
-
-.st14 {
-  fill: #fcfbfb;
-}
-
-.st15 {
-  fill: #fcfefe;
-}
-
-.st16 {
-  fill: #fafafa;
-}
-
-.st17 {
-  fill: #fbfcfc;
-}
-
-.st18 {
-  fill: #f9f9f9;
-}
-
-.st19 {
-  fill: #fbfafa;
-}
-
-.st20 {
-  fill: #fafbfb;
-}
-
-.st21 {
-  fill: #fafdfd;
-}
-
-.st22 {
-  fill: #f9fbfb;
-}
-
-.st23 {
-  fill: #f8fbfb;
-}
-
-.st24 {
-  fill: #f8fafa;
-}
-
-.st25 {
-  fill: #f7f8f8;
-}
-
-.st26 {
-  fill: #f9fafa;
-}
-
-.st27 {
-  fill: #fbf9f9;
-}
-
-.st28 {
-  fill: #f6f8f8;
-}
-
-.st29 {
-  fill: #f5f7f7;
-}
-
-.st30 {
-  fill: #e9f2f2;
-}
-
-.st31 {
-  fill: #f2f3f3;
-}
-
-.st32 {
-  fill: #fafcfc;
-}
-
-.st33 {
-  fill: #f7f9f9;
-}
-
-.st34 {
-  fill: #f1f1f1;
-}
-
-.st35 {
-  fill: #f3f4f4;
-}
-
-.st36 {
-  fill: #f4f4f4;
-}
-
-.st37 {
-  fill: #f3f6f6;
-}
-
-.st38 {
-  fill: #f3f7f7;
-}
-
-.st39 {
-  fill: #f2f5f5;
-}
-
-.st40 {
-  fill: #eaefef;
-}
-
-.st41 {
-  fill: #e7eded;
-}
-
-.st42 {
-  fill: #f2f6f6;
-}
-
-.st43 {
-  fill: #f9f4f4;
-}
-
-.st44 {
-  fill: #f1f2f2;
-}
-
-.st45 {
-  fill: #edf2f2;
-}
-
-.st46 {
-  fill: #ebf2f2;
-}
-
-.st47 {
-  fill: #eceded;
-}
-
-.st48 {
-  fill: #ecf0f0;
-}
-
-.st49 {
-  fill: #edf0f0;
-}
-
-.st50 {
-  fill: #efeeee;
-}
-
-.st51 {
-  fill: #dfdddd;
-}
-
-.st52 {
-  fill: #edefef;
-}
-
-.st53 {
-  fill: #d4dede;
-}
-
-.st54 {
-  fill: #eceeee;
-}
-
-.st55 {
-  fill: #ecf7f7;
-}
-
-.st56 {
-  fill: #ebeeee;
-}
-
-.st57 {
-  fill: #eac9c9;
-}
-
-.st58 {
-  fill: #94e2e2;
-}
-
-.st59 {
-  fill: #c7dddd;
-}
-
-.st60 {
-  fill: #524a4a;
-}
-
-.st61 {
-  fill: #dde3e3;
-}
-
-.st62 {
-  fill: #f5ffff;
-}
-
-.st63 {
-  fill: #bfbaba;
-}
-
-.st64 {
-  fill: #e4e1e1;
-}
-
-.st65 {
-  fill: #fdfafa;
-}
-
-.st66 {
-  fill: #caebeb;
-}
-
-.st67 {
-  fill: #e0dede;
-}
-
-.st68 {
-  fill: #e1e4e4;
-}
-
-.st69 {
-  fill: #d5dbdb;
-}
-
-.st70 {
-  fill: #c8afaf;
-}
-
-.st71 {
-  fill: #c8e7e7;
-}
-
-.st72 {
-  fill: #e9dbdb;
-}
-
-.st73 {
-  fill: #e8e6e6;
-}
-
-.st74 {
-  fill: #d1cccc;
-}
-
-.st75 {
-  fill: #a8c8c8;
-}
-
-.st76 {
-  fill: #dbdcdc;
-}
-
-.st77 {
-  fill: #855151;
-}
-
-.st78 {
-  fill: #c4cece;
-}
-
-.st79 {
-  fill: #a59696;
-}
-
-.st80 {
-  fill: #591818;
-}
-
-.st81 {
-  fill: #c2abab;
-}
-
-.st82 {
-  fill: #867a7a;
-}
-
-.st83 {
-  fill: #534141;
-}
-
-.st84 {
-  fill: #cdd4d4;
-}
-
-.st85 {
-  fill: #665454;
-}
-
-.st86 {
-  fill: #767272;
-}
-
-.st87 {
-  fill: #4e9292;
-}
-
-.st88 {
-  fill: #816161;
-}
-
-.st89 {
-  fill: #beb6b6;
-}
-
-.st90 {
-  fill: #327070;
-}
-
-.st91 {
-  fill: #827474;
-}
-
-.st92 {
-  fill: #bed0d0;
-}
-
-.st93 {
-  fill: #b0f2f2;
-}
-
-.st94 {
-  fill: #baf6f6;
-}
-
-.st95 {
-  fill: #623030;
-}
-
-.st96 {
-  fill: #cac3c3;
-}
-
-.st97 {
-  fill: #464040;
-}
-
-.st98 {
-  fill: #ace0e0;
-}
-
-.st99 {
-  fill: #809f9f;
-}
-
-.st100 {
-  fill: #8fabab;
-}
-
-.st101 {
-  fill: #769999;
-}
-
-.st102 {
-  fill: #57a2a2;
-}
-
-.st103 {
-  fill: #dcadad;
-}
-
-.st104 {
-  fill: #afa1a1;
-}
-
-.st105 {
-  fill: #7ccccc;
-}
-
-.st106 {
-  fill: #384646;
-}
-
-.st107 {
-  fill: #96b6b6;
-}
-
-.st108 {
-  fill: #918686;
-}
-
-.st109 {
-  fill: #6a8484;
-}
-
-.st110 {
-  fill: #c2aeae;
-}
-
-.st111 {
-  fill: #a9acac;
-}
-
-.st112 {
-  fill: #0a0808;
-}
-
-.st113 {
-  fill: #0e0d0d;
-}
-
-.st114 {
-  fill: #151212;
-}
-
-.st115 {
-  fill: #dcc9c9;
-}
+    .st26 {
+      fill: #f9fafa;
+    }
+
+    .st27 {
+      fill: #fbf9f9;
+    }
+
+    .st28 {
+      fill: #f6f8f8;
+    }
+
+    .st29 {
+      fill: #f5f7f7;
+    }
+
+    .st30 {
+      fill: #e9f2f2;
+    }
+
+    .st31 {
+      fill: #f2f3f3;
+    }
+
+    .st32 {
+      fill: #fafcfc;
+    }
+
+    .st33 {
+      fill: #f7f9f9;
+    }
+
+    .st34 {
+      fill: #f1f1f1;
+    }
+
+    .st35 {
+      fill: #f3f4f4;
+    }
+
+    .st36 {
+      fill: #f4f4f4;
+    }
+
+    .st37 {
+      fill: #f3f6f6;
+    }
+
+    .st38 {
+      fill: #f3f7f7;
+    }
+
+    .st39 {
+      fill: #f2f5f5;
+    }
+
+    .st40 {
+      fill: #eaefef;
+    }
+
+    .st41 {
+      fill: #e7eded;
+    }
+
+    .st42 {
+      fill: #f2f6f6;
+    }
+
+    .st43 {
+      fill: #f9f4f4;
+    }
+
+    .st44 {
+      fill: #f1f2f2;
+    }
+
+    .st45 {
+      fill: #edf2f2;
+    }
+
+    .st46 {
+      fill: #ebf2f2;
+    }
+
+    .st47 {
+      fill: #eceded;
+    }
+
+    .st48 {
+      fill: #ecf0f0;
+    }
+
+    .st49 {
+      fill: #edf0f0;
+    }
+
+    .st50 {
+      fill: #efeeee;
+    }
+
+    .st51 {
+      fill: #dfdddd;
+    }
+
+    .st52 {
+      fill: #edefef;
+    }
+
+    .st53 {
+      fill: #d4dede;
+    }
+
+    .st54 {
+      fill: #eceeee;
+    }
+
+    .st55 {
+      fill: #ecf7f7;
+    }
+
+    .st56 {
+      fill: #ebeeee;
+    }
+
+    .st57 {
+      fill: #eac9c9;
+    }
+
+    .st58 {
+      fill: #94e2e2;
+    }
+
+    .st59 {
+      fill: #c7dddd;
+    }
+
+    .st60 {
+      fill: #524a4a;
+    }
+
+    .st61 {
+      fill: #dde3e3;
+    }
+
+    .st62 {
+      fill: #f5ffff;
+    }
+
+    .st63 {
+      fill: #bfbaba;
+    }
+
+    .st64 {
+      fill: #e4e1e1;
+    }
+
+    .st65 {
+      fill: #fdfafa;
+    }
+
+    .st66 {
+      fill: #caebeb;
+    }
+
+    .st67 {
+      fill: #e0dede;
+    }
+
+    .st68 {
+      fill: #e1e4e4;
+    }
+
+    .st69 {
+      fill: #d5dbdb;
+    }
+
+    .st70 {
+      fill: #c8afaf;
+    }
+
+    .st71 {
+      fill: #c8e7e7;
+    }
+
+    .st72 {
+      fill: #e9dbdb;
+    }
+
+    .st73 {
+      fill: #e8e6e6;
+    }
+
+    .st74 {
+      fill: #d1cccc;
+    }
+
+    .st75 {
+      fill: #a8c8c8;
+    }
+
+    .st76 {
+      fill: #dbdcdc;
+    }
+
+    .st77 {
+      fill: #855151;
+    }
+
+    .st78 {
+      fill: #c4cece;
+    }
+
+    .st79 {
+      fill: #a59696;
+    }
+
+    .st80 {
+      fill: #591818;
+    }
+
+    .st81 {
+      fill: #c2abab;
+    }
+
+    .st82 {
+      fill: #867a7a;
+    }
+
+    .st83 {
+      fill: #534141;
+    }
+
+    .st84 {
+      fill: #cdd4d4;
+    }
+
+    .st85 {
+      fill: #665454;
+    }
+
+    .st86 {
+      fill: #767272;
+    }
+
+    .st87 {
+      fill: #4e9292;
+    }
+
+    .st88 {
+      fill: #816161;
+    }
+
+    .st89 {
+      fill: #beb6b6;
+    }
+
+    .st90 {
+      fill: #327070;
+    }
+
+    .st91 {
+      fill: #827474;
+    }
+
+    .st92 {
+      fill: #bed0d0;
+    }
+
+    .st93 {
+      fill: #b0f2f2;
+    }
+
+    .st94 {
+      fill: #baf6f6;
+    }
+
+    .st95 {
+      fill: #623030;
+    }
+
+    .st96 {
+      fill: #cac3c3;
+    }
+
+    .st97 {
+      fill: #464040;
+    }
+
+    .st98 {
+      fill: #ace0e0;
+    }
+
+    .st99 {
+      fill: #809f9f;
+    }
+
+    .st100 {
+      fill: #8fabab;
+    }
+
+    .st101 {
+      fill: #769999;
+    }
+
+    .st102 {
+      fill: #57a2a2;
+    }
+
+    .st103 {
+      fill: #dcadad;
+    }
+
+    .st104 {
+      fill: #afa1a1;
+    }
+
+    .st105 {
+      fill: #7ccccc;
+    }
+
+    .st106 {
+      fill: #384646;
+    }
+
+    .st107 {
+      fill: #96b6b6;
+    }
+
+    .st108 {
+      fill: #918686;
+    }
+
+    .st109 {
+      fill: #6a8484;
+    }
+
+    .st110 {
+      fill: #c2aeae;
+    }
+
+    .st111 {
+      fill: #a9acac;
+    }
+
+    .st112 {
+      fill: #0a0808;
+    }
+
+    .st113 {
+      fill: #0e0d0d;
+    }
+
+    .st114 {
+      fill: #151212;
+    }
+
+    .st115 {
+      fill: #dcc9c9;
+    }
 
 /*END ADOBE ILLUSTRATOR EXPORT*/
   </style>
