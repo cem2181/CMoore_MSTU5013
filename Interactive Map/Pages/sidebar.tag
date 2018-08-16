@@ -33,36 +33,62 @@
           <a href="#eighth-floor">Eighth Floor</a>
         </li>
       </ul>
+      <div class="sidebar-footer">
+        <p>To make a footer or to not make a footer...</p>
+        <p>...that is the question</p>
+      </div>
     </nav>
   </div>
 
   <style type="text/css">
+
+    a, a:hover, a:focus {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .wrapper {
       display: flex;
       width: 100%;
       align-items: stretch;
     }
-  
+
     #sidebar {
       width: 250px;
       min-height: 100vh;
-      background: silver;
+      background: #f4f7fc;
+      color: #454749;
+      border-right: 2px solid #fff;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        border-bottom: 2px solid #fff;
+        background: #dcdfe5;
     }
 
     #sidebar ul.components {
-      padding: 20px 0;
-      border-bottom: 1px solid #000;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
     }
     #sidebar ul p {
       color: #fff;
       padding: 10px;
     }
 
+    #sidebar ul li {
+      display: table-row;
+      text-align: left;
+      padding-left: 10px;
+    }
+
     #sidebar ul li a {
       padding: 10px;
       font-size: 1.1em;
-      display: block;
+      display: table-cell;
+      vertical-align: middle;
+      border-bottom: 2px solid #fff;
     }
 
     #sidebar ul li a:hover {
@@ -73,27 +99,47 @@
       text-align: center;
       font-size: 5em;
     }
+
+    #sidebar ul li.active > a {
+      background: silver;
+    }
     </style>
     <script>
 
       route(function goTo(path) {
 
         if (path === 'first-floor'){
-          riot.mount('div#content', 'first-floor');
+          riot.mount('div#content', 'first-floor', {
+            title: 'First Floor'
+          });
         } else if (path === 'second-floor'){
-          riot.mount('div#content', 'second-floor');
+          riot.mount('div#content', 'second-floor', {
+            title: 'Second Floor'
+          });
         } else if (path === 'third-floor'){
-          riot.mount('div#content', 'third-floor');
+          riot.mount('div#content', 'third-floor', {
+            title: 'Third Floor'
+          });
         } else if (path === 'fourth-floor'){
-          riot.mount('div#content', 'fourth-floor');
+          riot.mount('div#content', 'fourth-floor', {
+            title: 'Fourth Floor'
+          });
         } else if (path === 'fifth-floor'){
-          riot.mount('div#content', 'fifth-floor');
+          riot.mount('div#content', 'fifth-floor', {
+            title: 'Fifth Floor'
+          });
         } else if (path === 'sixth-floor'){
-          riot.mount('div#content', 'sixth-floor');
+          riot.mount('div#content', 'sixth-floor', {
+            title: 'Sixth Floor'
+          });
         } else if (path === 'seventh-floor'){
-          riot.mount('div#content', 'seventh-floor');
+          riot.mount('div#content', 'seventh-floor', {
+            title: 'Seventh Floor'
+          });
         } else if (path === 'eighth-floor'){
-          riot.mount('div#content', 'eighth-floor');
+          riot.mount('div#content', 'eighth-floor', {
+            title: 'Eighth Floor'
+          });
         } else if (path === '' || '/') {
           riot.mount('div#content', 'lerner');
         }

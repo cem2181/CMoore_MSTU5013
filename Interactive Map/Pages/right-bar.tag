@@ -7,8 +7,8 @@
 
 <style type="text/css">
   #rightBar {
-    width: 400px;
-    height: 95vh;
+    width: 300px;
+    height: 90vh;
     background: #9bddff;
   }
 

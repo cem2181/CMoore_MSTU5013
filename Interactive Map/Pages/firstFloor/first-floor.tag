@@ -29,21 +29,37 @@
       <option value="nrotcOffice">NROTC Office</option>
     </select>
     <button type="button" class="btn btn-primary" onclick="drawPath()">Go</button>
-    <button type="button" class="btn btn-danger" onclick="resetImage(event)">Reset</button>
+    <button type="button" class="btn btn-danger" onclick="resetImage">Reset</button>
   </div>
   -->
-  <div class="wrapper">
-    <div class="col-md-6">
-      <h1>First Floor</h1>
+  <div class="container-fluid">
+    <div class="col-xs-5">
+      <div id:"roomInfo" >
+        <h1>{ opts.title }</h1>
+        <div id="infoContent">
+          <div class="row" id="variableContent">
+            <h3><span class="category">Room Name: </span></h3>
+            <h5><span class="category">Capacity: </span></h5>
+            <h5><span class="category">Reservable: </span></h5>
+            <img src="http://via.placeholder.com/415x250" alt="Hover Room Image" display="block" align="center" class="responsive">
+          </div>
+          <div class="row" id="fixedContent">
+            <!--Link to Firebase-->
+            <reserve-form></reserve-form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4" id="fixedImg">
       <svg height="816" width="816" id="firstFloorplan">
-        <polygon points="36,240 84,240 132,228 132,264 144,264 144,312 36,312" class="event-space" onclick="eventSpace(event)" id="greenRoom"/>
-        <polygon points="36,600 144,600 144,624 132,624 132,688 180,696 180,780 36,780" class="event-space" onclick="eventSpace(event)" id="partySpace"/>
-        <polygon points="216,264 216,552 324,552 324,588 720,588 720,276 324,276 324,264" class="event-space" onclick="eventSpace(event)" id="auditorium"/>
-        <polygon points="324,624 582,624 588,708 582,714 319,682" class="event-space" onclick="eventSpace(event)" id="northLobby"/>
-        <polygon points="720,276 792,276 792,540 768,540 768,624 720,624" class="event-space" onclick="eventSpace(event)" id="broadwayLobby"/>
-        <polygon points="792,540 768,540 768,624 792,624" class="event-space" onclick="eventSpace(event)" id="coatCheck"/>
-        <polygon points="792,684 792,744 756,744 660,732 660,660 768,660 768,684" class="office-space" onclick="eventSpace(event)" id="bookstore"/>
-        <polygon points="180,780 216,780 216,708 180,708" class="office-space" onclick="eventSpace(event)" id="nrotcOffice"/>
+        <polygon points="36,240 84,240 132,228 132,264 144,264 144,312 36,312" class="event-space" onclick="{ displayInfo }" id="greenRoom"/>
+        <polygon points="36,600 144,600 144,624 132,624 132,688 180,696 180,780 36,780" class="event-space" onclick="{ displayInfo }" id="partySpace"/>
+        <polygon points="216,264 216,552 324,552 324,588 720,588 720,276 324,276 324,264" class="event-space" onclick="{ displayInfo }" id="auditorium"/>
+        <polygon points="324,624 582,624 588,708 582,714 319,682" class="event-space" onclick="{ displayInfo }" id="northLobby"/>
+        <polygon points="720,276 792,276 792,540 768,540 768,624 720,624" class="event-space" onclick="{ displayInfo }" id="broadwayLobby"/>
+        <polygon points="792,540 768,540 768,624 792,624" class="event-space" onclick="{ displayInfo }" id="coatCheck"/>
+        <polygon points="792,684 792,744 756,744 660,732 660,660 768,660 768,684" class="office-space" onclick="{ displayInfo }" id="bookstore"/>
+        <polygon points="180,780 216,780 216,708 180,708" class="office-space" onclick="{ displayInfo }" id="nrotcOffice"/>
         <polygon points="36,240 36,780 396,780 384,744 564,744 564,780 792,780 792,12 708,12 708,24 672,24 672,12 648,12 648,24 624,24 624,12 588,12 588,36 576,36 576,96 588,96 588,240 216,240 216,216 120,216 120,204 108,204 108,216 84,216 84,240 36,240" style="fill:none;stroke:black;stroke-width:5"/>
         <polygon points="36,312 144,312 144,600 36,600" style="fill:silver;stroke:black;stroke-width:2"/>
         <polygon points="84,216 84,240 132,228 132,264 144,264 144,252 324,252 324,276 792,276 792,12 708,12 708,24 672,24 672,12 648,12 648,24 624,24 624,12 588,12 588,36 576,36 576,96 588,96 588,240 216,240 216,216 120,216 120,204 108,204 108,216 " style="fill:silver;stroke:black;stroke-width:2"/>
@@ -114,14 +130,11 @@
         <polyline points="768,600 744,600 744,516" style="fill:none;stroke:red;stroke-width:2;display:none" id="6,7" class="line"/>
       </svg>
     </div>
-    <div class="col-md-6">
-      <right-bar></right-bar>
-    </div>
   </div>
 
 
   <script type="text/javascript">
-    var rooms = [
+    this.rooms = [
     {
       id:'greenRoom',
       name: "Green Room",
@@ -130,7 +143,7 @@
      },
      {
        id: 'partySpace',
-       name: "Part Space",
+       name: "Party Space",
        capacity: "30",
        reservable: true
      },
@@ -171,16 +184,7 @@
        reservable: true
      }];
     /*add function to take user to page with matching title to id of space */
-    function eventSpace(event) {
-      for (var i=0; i <rooms.length; i++) {
-        if (rooms[i].id === event.target.id) {
-          var naam = rooms[i].name;
-          var num = rooms[i].capacity;
-          var reserve = rooms[i].reservable
-          alert(`${naam} \n Capacity: ${num} \n Reservable: ${reserve}`);
-        }
-      }
-    };
+
 
   </script>
 
@@ -189,6 +193,29 @@
     .event-space {
       fill: #5bbbe5;
       fill-opacity: .5;
+      }
+
+    .container-fluid {
+        margin-left: -50px;
+      }
+
+    #fixedImg {
+        border-left: 2px solid #f4f7fc;
+      }
+
+    #infoContent {
+      padding: 5px 20px 20px 50px;
+      align-items: center;
+      }
+
+    #variableContent {
+      padding-bottom: 30px;
+      border-bottom: 2px solid #f4f7fc;
+      width: inherit;
+      }
+
+    #fixedContent {
+      padding-top: 30px;
       }
 
     .event-space:hover {
@@ -212,15 +239,18 @@
       }
 
     #firstFloorplan {
-      transform: scale(0.8);
-      margin-top: -50px;
+      transform: scale(0.7);
+      margin-top: -80px;
+      margin-left: -50px;
     }
 
     h1 {
-      text-align: left;
-      margin-left: 100px;
-      margin-bottom: -100px;
+      text-align: center;
       font-size: 4em;
+    }
+    .responsive {
+      width: 100%;
+      height: auto;
     }
 
   </style>
