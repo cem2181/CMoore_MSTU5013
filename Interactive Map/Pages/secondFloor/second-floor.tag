@@ -5,29 +5,36 @@
         <h1>{ opts.title }</h1>
         <div id="infoContent">
           <div class="row" id="variableContent">
-            <h3><span class="category">Room Name: </span>Hover Room Name</h3>
-            <h5><span class="category">Capacity: </span>Hover Room Capacity</h5>
-            <h5><span class="category">Reservable: </span>Hover Room Reservable True/False</h5>
+
+            <!--variable header with links to space information-->
+            <h3><span class="category">Room Name: </span>{ name }</h3>
+            <h5><span class="category">Capacity: </span>{ capacity }</h5>
+            <h5><span class="category">Reservable: </span>{ reservable }</h5>
             <img src="http://via.placeholder.com/415x250" alt="Hover Room Image" display="block" align="center" class="responsive">
           </div>
           <div class="row" id="fixedContent">
-            <!--Link to Firebase-->
+            <!--links to firebase-->
             <reserve-form></reserve-form>
           </div>
         </div>
       </div>
     </div>
+    <!--In progress floorplan drawn from svg element-->
     <div class="col-xs-4" id="fixedImg">
       <svg height="816" width="816" id="firstFloorplan">
+
+        <!--individual rooms-->
         <polygon points="" class="event-space" onclick="eventSpace(event)" id="greenRoom"/>
         <polygon points="" class="event-space" onclick="eventSpace(event)" id="partySpace"/>
         <polygon points="" class="event-space" onclick="eventSpace(event)" id="auditorium"/>
         <polygon points="" class="event-space" onclick="eventSpace(event)" id="northLobby"/>
         <polygon points="" class="event-space" onclick="eventSpace(event)" id="broadwayLobby"/>
         <polygon points="" class="event-space" onclick="eventSpace(event)" id="coatCheck"/>
-        <polygon points="156,384 132,384 120,396 120,468 156,468" class="food-service" onclick="eventSpace(event)" id="cafeEast"/>
-        <polygon points="60,264 24,264 24,300 60,300" class="office-space" onclick="eventSpace(event)" id="santander"/>
+        <polygon points="156,384 132,384 120,396 120,468 156,468" class="food-service" onclick="{ cafeEast }" id="cafeEast"/>
+        <polygon points="60,264 24,264 24,300 60,300" class="office-space" onclick="{ santanderBank }" id="santander"/>
         <polygon points="" class="office-space" onclick="eventSpace(event)" id="nrotcOffice"/>
+
+        <!--Background image-->
         <polyline points="24,264 24,240 72,240 72,216 96,216 96,204 108,204 108,216 216,216 216,240 636,240 636,252 600,252 600,264 552,264 552,276 564,276 564,564 216,564 216,504 168,504 168,408 204,408 204,336 168,336 168,264 120,264 120,276 96,276 96,264 24,264" style="fill:silver;stroke:black;stroke-width:3"/>
         <polyline points="732,240 708,240 708,252 732,252 732,240" style="fill:silver;stroke:black;stroke-width:3"/>
         <polyline points="660,576 600,576 600,600 660,600 660,576" style="fill:silver;stroke:black;stroke-width:3"/>
@@ -110,141 +117,99 @@
 
 
   <script type="text/javascript">
-    var rooms = [
-    {
-      id:'greenRoom',
-      name: "Green Room",
-      capacity: "30",
-      reservable: true
-     },
-     {
-       id: 'partySpace',
-       name: "Part Space",
-       capacity: "30",
-       reservable: true
-     },
-     {
-       id: 'nrotcOffice',
-       name: "NROTC Office",
-       capacity: "10",
-       reservable: false
-     },
-     {
-       id: 'northLobby',
-       name: "North Lobby",
-       capacity: "150",
-       reservable: true
-     },
-     {
-       id: 'auditorium',
-       name: "Roone Arledge Auditorium",
-       capacity: "1500",
-       reservable: true
-     },
-     {
-       id: 'bookstore',
-       name: "Columbia Bookstore",
-       capacity: "750",
-       reservable: false
-     },
-     {
-       id: 'coatCheck',
-       name: "Coat Check",
-       capacity: "5",
-       reservable: true
-     },
-     {
-       id: 'broadwayLobby',
-       name: "Broadway Lobby",
-       capacity: "50",
-       reservable: true
-     }];
-    /*add function to take user to page with matching title to id of space */
-    function eventSpace(event) {
-      for (var i=0; i <rooms.length; i++) {
-        if (rooms[i].id === event.target.id) {
-          var naam = rooms[i].name;
-          var num = rooms[i].capacity;
-          var reserve = rooms[i].reservable
-          alert(`${naam} \n Capacity: ${num} \n Reservable: ${reserve}`);
-        }
-      }
+
+    //Figure out how to do this with loops...updates the information for the header
+    this.room = "";
+    this.capacity = "";
+    this.reservable = "";
+
+    this.cafeEast = function(event){
+      this.room = "Cafe East";
+      this.capacity = "10";
+      this.reservable = "No";
+    };
+
+    this.santanderBank = function(event){
+      this.room = "Santander Bank";
+      this.capacity = "5";
+      this.reservable = "No";
     };
 
   </script>
 
 
   <style type="text/css">
-    .event-space {
-      fill: #5bbbe5;
-      fill-opacity: .5;
-      }
+  .event-space {
+    fill: #5bbbe5;
+    fill-opacity: .5;
+    }
 
-    .container-fluid {
-        margin-left: -50px;
-      }
-
-    #fixedImg {
-        border-left: 2px solid #f4f7fc;
-      }
-
-    #infoContent {
-      padding: 5px 20px 20px 50px;
-      align-items: center;
-      }
-
-    #variableContent {
-      padding-bottom: 30px;
-      border-bottom: 2px solid #f4f7fc;
-      width: inherit;
-      }
-
-    #fixedContent {
-      padding-top: 30px;
-      }
-
-    .event-space:hover {
-      fill: #ffe751;
-      fill-opacity: 1;
-      }
-    .food-service:hover {
-      fill: #ffe751;
-      fill-opacity: 1;
-      }
-    .food-service {
-      fill: #cff1fc;
-      fill-opacity: .5;
-      }
-
-    .office-space {
-      fill: #13247a;
-      fill-opacity: .5;
-      }
-
-    .office-space:hover {
-      fill: #ffe751;
-      fill-opacity: 1;
-      }
-
-    h5 {
-      padding-left: 5px;
-      padding-right:5px;
-      }
-
-    #firstFloorplan {
-      transform: scale(0.7);
-      margin-top: -80px;
+  .container-fluid {
       margin-left: -50px;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 4em;
+  #fixedImg {
+      border-left: 2px solid #f4f7fc;
     }
-    .responsive {
-      width: 100%;
-      height: auto;
+
+  #infoContent {
+    padding: 5px 20px 15px 50px;
+    align-items: center;
     }
+
+  #variableContent {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f4f7fc;
+    width: inherit;
+    }
+
+  #fixedContent {
+    padding-top: 10px;
+    }
+
+  .event-space:hover {
+    fill: #ffe751;
+    fill-opacity: 1;
+    }
+
+  .office-space {
+    fill: #13247a;
+    fill-opacity: .5;
+    }
+
+  .office-space:hover {
+    fill: #ffe751;
+    fill-opacity: 1;
+    }
+
+  h5 {
+    padding-left: 5px;
+    padding-right:5px;
+    }
+
+  #firstFloorplan {
+    transform: scale(0.7);
+    margin-top: -80px;
+    margin-left: -50px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 4em;
+  }
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .food-service:hover {
+  fill: #ffe751;
+  fill-opacity: 1;
+}
+.food-service {
+  fill: #cff1fc;
+  fill-opacity: .5;
+}
 
   </style>
 

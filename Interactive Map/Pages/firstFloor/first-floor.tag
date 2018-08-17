@@ -1,65 +1,42 @@
 <first-floor>
 
-  <!--
-  <p>Interactive map. Click on an area to learn more.</p>
-  <p>Need directions? Select 2 places below to see the fastest path.</p>
 
-  <div class="form-inline">
-    <select id="roomSelectA" class="form-control">
-      <option value="" selected disabled>Select a room</option>
-      <option value="greenRoom">Green Room</option>
-      <option value="partySpace">Party Space</option>
-      <option value="auditorium">Auditorium</option>
-      <option value="northLobby">North Lobby</option>
-      <option value="broadwayLobby">Broadway Lobby</option>
-      <option value="coatCheck">Coat Check</option>
-      <option value="bookstore">Bookstore</option>
-      <option value="nrotcOffice">NROTC Office</option>
-    </select>
-    <span>to</span>
-    <select id="roomSelectB" class="form-control">
-      <option value="" selected disabled>Select a room</option>
-      <option value="greenRoom">Green Room</option>
-      <option value="partySpace">Party Space</option>
-      <option value="auditorium">Auditorium</option>
-      <option value="northLobby">North Lobby</option>
-      <option value="broadwayLobby">Broadway Lobby</option>
-      <option value="coatCheck">Coat Check</option>
-      <option value="bookstore">Bookstore</option>
-      <option value="nrotcOffice">NROTC Office</option>
-    </select>
-    <button type="button" class="btn btn-primary" onclick="drawPath()">Go</button>
-    <button type="button" class="btn btn-danger" onclick="resetImage">Reset</button>
-  </div>
-  -->
   <div class="container-fluid">
     <div class="col-xs-5">
       <div id:"roomInfo" >
         <h1>{ opts.title }</h1>
         <div id="infoContent">
+
+          <!--Variable content to be decided by clicked location-->
           <div class="row" id="variableContent">
-            <h3><span class="category">Room Name: </span></h3>
-            <h5><span class="category">Capacity: </span></h5>
-            <h5><span class="category">Reservable: </span></h5>
-            <img src="http://via.placeholder.com/415x250" alt="Hover Room Image" display="block" align="center" class="responsive">
+            <h3><span class="category">Room Name: </span>{ room }</h3>
+            <h5><span class="category">Capacity: </span>{ capacity }</h5>
+            <h5><span class="category">Reservable: </span>{ reservable }</h5>
+            <img src="http://via.placeholder.com/415x250" alt="Hover Room Image" refs="roomImage" display="block" align="center" class="responsive">
           </div>
           <div class="row" id="fixedContent">
-            <!--Link to Firebase-->
+
+            <!--Linked to Firebase-->
             <reserve-form></reserve-form>
           </div>
         </div>
       </div>
     </div>
+
+    <!--Start of floorplan svg element-->
     <div class="col-xs-4" id="fixedImg">
       <svg height="816" width="816" id="firstFloorplan">
-        <polygon points="36,240 84,240 132,228 132,264 144,264 144,312 36,312" class="event-space" onclick="{ displayInfo }" id="greenRoom"/>
-        <polygon points="36,600 144,600 144,624 132,624 132,688 180,696 180,780 36,780" class="event-space" onclick="{ displayInfo }" id="partySpace"/>
-        <polygon points="216,264 216,552 324,552 324,588 720,588 720,276 324,276 324,264" class="event-space" onclick="{ displayInfo }" id="auditorium"/>
-        <polygon points="324,624 582,624 588,708 582,714 319,682" class="event-space" onclick="{ displayInfo }" id="northLobby"/>
-        <polygon points="720,276 792,276 792,540 768,540 768,624 720,624" class="event-space" onclick="{ displayInfo }" id="broadwayLobby"/>
-        <polygon points="792,540 768,540 768,624 792,624" class="event-space" onclick="{ displayInfo }" id="coatCheck"/>
-        <polygon points="792,684 792,744 756,744 660,732 660,660 768,660 768,684" class="office-space" onclick="{ displayInfo }" id="bookstore"/>
-        <polygon points="180,780 216,780 216,708 180,708" class="office-space" onclick="{ displayInfo }" id="nrotcOffice"/>
+        <!--clickable room overlays-->
+        <polygon points="36,240 84,240 132,228 132,264 144,264 144,312 36,312" class="event-space" onclick="{ greenRoom }" id="greenRoom" value="Green Room"/>
+        <polygon points="36,600 144,600 144,624 132,624 132,688 180,696 180,780 36,780" class="event-space" onclick="{ partySpace }" id="partySpace" value="Party Space"/>
+        <polygon points="216,264 216,552 324,552 324,588 720,588 720,276 324,276 324,264" class="event-space" onclick="{ auditorium }" id="auditorium" value="Auditorium"/>
+        <polygon points="324,624 582,624 588,708 582,714 319,682" class="event-space" onclick="{ northLobby }" id="northLobby" value="North Lobby"/>
+        <polygon points="720,276 792,276 792,540 768,540 768,624 720,624" class="event-space" onclick="{ broadwayLobby }" id="broadwayLobby" value="Broadway Lobby"/>
+        <polygon points="792,540 768,540 768,624 792,624" class="event-space" onclick="{ coatCheck }" id="coatCheck" value="Coat Check"/>
+        <polygon points="792,684 792,744 756,744 660,732 660,660 768,660 768,684" class="office-space" onclick="{ bookstore }" id="bookstore" value="BookStore"/>
+        <polygon points="180,780 216,780 216,708 180,708" class="office-space" onclick="{ nrotcOffice }" id="nrotcOffice" value="NROTC"/>
+
+        <!--Remainder of svg-->
         <polygon points="36,240 36,780 396,780 384,744 564,744 564,780 792,780 792,12 708,12 708,24 672,24 672,12 648,12 648,24 624,24 624,12 588,12 588,36 576,36 576,96 588,96 588,240 216,240 216,216 120,216 120,204 108,204 108,216 84,216 84,240 36,240" style="fill:none;stroke:black;stroke-width:5"/>
         <polygon points="36,312 144,312 144,600 36,600" style="fill:silver;stroke:black;stroke-width:2"/>
         <polygon points="84,216 84,240 132,228 132,264 144,264 144,252 324,252 324,276 792,276 792,12 708,12 708,24 672,24 672,12 648,12 648,24 624,24 624,12 588,12 588,36 576,36 576,96 588,96 588,240 216,240 216,216 120,216 120,204 108,204 108,216 " style="fill:silver;stroke:black;stroke-width:2"/>
@@ -100,6 +77,9 @@
         <polyline points="360,624 372,624" style="fill:none;stroke:black;stroke-width:2"/>
         <polyline points="384,624 396,624" style="fill:none;stroke:black;stroke-width:2"/>
         <polyline points="408,624 420,624" style="fill:none;stroke:black;stroke-width:2"/>
+
+        <!-- these elements aren't used for now...need to implement directions later
+
         <polyline points="144,300 156,300 156,648 144,648" style="fill:none;stroke:red;stroke-width:2;display:none" id="0,1" class="line"/>
         <polyline points="144,300 156,300 156,648 396,648" style="fill:none;stroke:red;stroke-width:2;display:none" id="0,3" class="line"/>
         <polyline points="144,300 156,300 156,648 396,648 396,588" style="fill:none;stroke:red;stroke-width:2;display:none" id="0,4" class="line"/>
@@ -128,64 +108,64 @@
         <polyline points="768,768 624,768 624,648 744,648 744,600 768,600" style="fill:none;stroke:red;stroke-width:2;display:none" id="5,6" class="line"/>
         <polyline points="768,768 624,768 624,648 744,648 744,600 744,516" style="fill:none;stroke:red;stroke-width:2;display:none" id="5,7" class="line"/>
         <polyline points="768,600 744,600 744,516" style="fill:none;stroke:red;stroke-width:2;display:none" id="6,7" class="line"/>
+        -->
       </svg>
     </div>
   </div>
 
 
   <script type="text/javascript">
-    this.rooms = [
-    {
-      id:'greenRoom',
-      name: "Green Room",
-      capacity: "30",
-      reservable: true
-     },
-     {
-       id: 'partySpace',
-       name: "Party Space",
-       capacity: "30",
-       reservable: true
-     },
-     {
-       id: 'nrotcOffice',
-       name: "NROTC Office",
-       capacity: "10",
-       reservable: false
-     },
-     {
-       id: 'northLobby',
-       name: "North Lobby",
-       capacity: "150",
-       reservable: true
-     },
-     {
-       id: 'auditorium',
-       name: "Roone Arledge Auditorium",
-       capacity: "1500",
-       reservable: true
-     },
-     {
-       id: 'bookstore',
-       name: "Columbia Bookstore",
-       capacity: "750",
-       reservable: false
-     },
-     {
-       id: 'coatCheck',
-       name: "Coat Check",
-       capacity: "5",
-       reservable: true
-     },
-     {
-       id: 'broadwayLobby',
-       name: "Broadway Lobby",
-       capacity: "50",
-       reservable: true
-     }];
-    /*add function to take user to page with matching title to id of space */
+    //functions to update the variable information from the clicked element
 
+    this.room = "";
+    this.capacity = "";
+    this.reservable = "";
 
+    //TO-DO: find a way to make this into a loop
+
+    this.greenRoom = function(event){
+      this.room = "Green Room";
+      this.capacity = "30";
+      this.reservable = "Yes";
+    }
+
+    this.partySpace = function(event){
+      this.room = "Party Space";
+      this.capacity = "30";
+      this.reservable = "Yes";
+    }
+
+    this.auditorium = function(event){
+      this.room = "Auditorium";
+      this.capacity = "1500";
+      this.reservable = "Yes";
+    }
+
+    this.northLobby = function(event){
+      this.room = "North Lobby";
+      this.capacity = "150";
+      this.reservable = "Yes";
+    }
+    this.broadwayLobby = function(event){
+      this.room = "Broadway Lobby";
+      this.capacity = "50";
+      this.reservable = "Yes";
+    }
+    this.coatCheck = function(event){
+      this.room = "Coat Check";
+      this.capacity = "5";
+      this.reservable = "Yes";
+    }
+    this.bookstore = function(event){
+      this.room = "Columbia Bookstore";
+      this.capacity = "750";
+      this.reservable = "No";
+    }
+    this.nrotcOffice = function(event){
+      this.room = "NROTC Office";
+      this.capacity = "5";
+      this.reservable = "No";
+    }
   </script>
 
 
@@ -204,18 +184,18 @@
       }
 
     #infoContent {
-      padding: 5px 20px 20px 50px;
+      padding: 5px 20px 15px 50px;
       align-items: center;
       }
 
     #variableContent {
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       border-bottom: 2px solid #f4f7fc;
       width: inherit;
       }
 
     #fixedContent {
-      padding-top: 30px;
+      padding-top: 10px;
       }
 
     .event-space:hover {

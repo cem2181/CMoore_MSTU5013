@@ -1,4 +1,5 @@
 <sidebar>
+<!--Navigation elements for the sidebar-->
   <div class="wrapper">
     <nav id="sidebar">
       <div class="sidebar-header">
@@ -33,10 +34,6 @@
           <a href="#eighth-floor">Eighth Floor</a>
         </li>
       </ul>
-      <div class="sidebar-footer">
-        <p>To make a footer or to not make a footer...</p>
-        <p>...that is the question</p>
-      </div>
     </nav>
   </div>
 
@@ -106,6 +103,7 @@
     </style>
     <script>
 
+    //should be an easier way to do this, but it works...???
       route(function goTo(path) {
 
         if (path === 'first-floor'){
