@@ -1,9 +1,9 @@
 # CMoore_MSTU5013
-I'm still waiting to hear back from a group about working together, so may change this over the next couple of days. However, as of now, should I work alone, I would like to commit my semester project to following up on my final project for the previous class. It was for an interactive map of the building I work in, but very much expanded. In terms of a learning opportunity, I see it as asking about accessibility and what information students need to know in order to be able to more easily navigate a very confusing building. It would also give information to new students as to what can be found within the building and how to interact with individual departments. 
+This may seem familiar as it is kind of a continuation of my project from last semester with a bit of an upgrade. In terms of it being a "learning design", the primary element of learning is in seeing the rooms of the building, learning about their elments and (in the future) other things that can be done while in them. 
 
-As is commented above, the learning problem I'm trying to solve is mostly practical: no one knows how to easily navigate our building. There are plenty of ways to solve that if we can give individual attention to each person, but that is not feasible. The hope with this app would be to allow more people to be able to experience the best of what the building has to offer from the very beginning and allow for less confusion. This app will feature navigation, information, room tours, reservations, and history to better connect everyone to the building.
+I wasn't able to implement all of the elements that I wanted to include from the beginning, but think that overall it's been a real learning experience and I made something that is a step up from what was there before using Riot and Firebase to create a more full-fledged product.
 
-The data I would want to capture from the users is most directly related to what spaces they search for the most and, in a section for suggestions, what they would like to see changed in the building. Hopefully, if gathered correctly, my team can learn from the data and have an analytics page that provides us with more information to easily implement new initiatives.
+First off:
 
 ## Independent Study A: UX/UI design
 
@@ -20,7 +20,6 @@ Reading Garret's book on the Elements of User Experience was particularly helpfu
 		- Common directional questions for heavy traffic areas
 		- Information on each of the rooms and the hours of departments
 		- Links to specific departments' websites on their pages
-		- TBC
 
 - Things the users `actually` want:
 	- A clear representation of the building 
@@ -29,13 +28,20 @@ Reading Garret's book on the Elements of User Experience was particularly helpfu
 - Things the users don't know they want: 
 	- Simplicity at its core
 
-I'm working toward incorporating each of these elements into the main design and keep each space with data using RIOT. 
+I was able to implement some of this and really focused on making the navigation intuitve. While I wasn't able to incorporate all of the elements (or even all of the floorplans), keeping the simplicity and representation elements were important for me to achieve. From the landing page, the sidebar makes it fairly simple to select where to go next and once you click on an element in the floorplan, more details become evident. 
 
-##Update 8/12
-I've done quite a bit of work these weeks on figuring out an intuitive system using RIOT and Firebase. Still a lot to be done before the final project is complete, but I've definitely made some progress. 
+With more time and elements, some of this would probably have to change or there would have to be more routing to other pages. I'd also like to experiment with touch/mobile interfaces.
 
-As far as the User Data demo......I'm still working on how to implement that into my design. It's not really something that has turned out to be extremely data heavy, so we'll see what happens as I don't want to add it just to have it if it detracts from what should be there.
+## Independent Study B: Bootstrap Essentials
 
-I'll actually have an update on that after more work tomorrow. 
+The whole navigation sidebar is something that was a godsend from bootstrap. Hopefully I was able to implement it well using some of the tutorials and readings I studied, but there are probably some erroneous elements as usual. 
+
+## Firebase
+
+Firebase was ineteresting for me to try to implement as the event reservation system was something I thought could be useful, but especially if the user is able to see when something is booked. I couldn't quite figure that out, so any thoughts would be much appreciated. 
+
+## That's All Folks! 
+
+Thank you for a great summer! I learned so much it's almost hard to believe. On to more coding!  
 
 	
