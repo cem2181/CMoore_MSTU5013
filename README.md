@@ -1,4 +1,5 @@
 # CMoore_MSTU5013
+https://cem2181.github.io/CMoore_MSTU5013/
 This may seem familiar as it is kind of a continuation of my project from last semester with a bit of an upgrade. In terms of it being a "learning design", the primary element of learning is in seeing the rooms of the building, learning about their elments and (in the future) other things that can be done while in them. 
 
 I wasn't able to implement all of the elements that I wanted to include from the beginning, but think that overall it's been a real learning experience and I made something that is a step up from what was there before using Riot and Firebase to create a more full-fledged product.
